@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <div class="register-card">
+    <h3 class="register-title">Create Account</h3>
+
+    <form id="register-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter username" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" />
+      </div>
+
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select class="form-select" id="role">
+          <option value="ADMIN">Admin</option>
+          <option value="USER">User</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-register">Register</button>
+    </form>
+
+    <div id="register-error" class="error"></div>
+
+    <p class="login-text">
+      Already have an account?
+      <a href="login.html" class="login-link">Login</a>
+    </p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
