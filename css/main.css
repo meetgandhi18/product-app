@@ -188,7 +188,7 @@ label:first-of-type {
 
 /* Error message */
 
-#login-error {
+.error {
   color: #d32f2f;
   display: none;
   margin-top: 15px;

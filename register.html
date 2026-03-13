@@ -15,7 +15,7 @@
   <div class="register-card">
     <h3 class="register-title">Create Account</h3>
 
-    <form id="form">
+    <form id="register-form">
       <div class="form-group">
         <label for="email">Email</label>
         <input type="email" class="form-control" id="email" placeholder="Enter email" />
@@ -34,13 +34,15 @@
       <div class="form-group">
         <label for="role">Role</label>
         <select class="form-select" id="role">
-          <option value="admin">Admin</option>
-          <option value="user">User</option>
+          <option value="ADMIN">Admin</option>
+          <option value="USER">User</option>
         </select>
       </div>
 
       <button type="submit" class="btn-register">Register</button>
     </form>
+
+    <div id="register-error" class="error"></div>
 
     <p class="login-text">
       Already have an account?
