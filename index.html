@@ -3,14 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>Dashboard</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <script
-      src="https://code.jquery.com/jquery-4.0.0.js"
-      integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
-      crossorigin="anonymous"
-    ></script>
+
+  <body class="dashboard-page">
+    <!-- Navbar -->
+
+    <nav class="navbar">
+      <div class="nav-left">
+        <h2 class="logo">ProductApp</h2>
+        <a href="#" class="nav-link">Products</a>
+      </div>
+
+      <div class="nav-right">
+        <div class="profile-dropdown" id="profileDropdown">
+          <button class="profile-btn" id="profileBtn">
+            <span>👤</span> Profile
+          </button>
+
+          <div class="dropdown-menu" id="dropdownMenu">
+            <a href="#profile" class="dropdown-item">My Profile</a>
+            <a href="#settings" class="dropdown-item">Settings</a>
+            <a href="login.html" class="dropdown-item">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+
+    <div class="container py-4">
+      <h1 class="mb-4 dashboard-title">Product List</h1>
+
+      <div class="table-controls">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search product..."
+          autocomplete="off"
+        />
+
+        <div class="per-page">
+          <label for="perPageSelect">Products per page:</label>
+
+          <select id="perPageSelect" class="per-page-select">
+            <option value="5" selected>5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="product-table">
+          <thead>
+            <tr class="table-header">
+              <th class="sortable" data-key="id">ID</th>
+              <th class="sortable" data-key="title">Title</th>
+              <th class="sortable" data-key="price">Price</th>
+              <th class="sortable" data-key="category">Category</th>
+              <th>Image</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="productTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="pagination-section">
+        <div id="recordInfo">Showing 0 to 0 of 0 records</div>
+
+        <div class="pagination-buttons">
+          <button id="prevBtn" class="pagination-btn">Previous</button>
+
+          <button id="nextBtn" class="pagination-btn">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script type="module" src="./js/main.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#profileBtn").click(function (e) {
+          e.stopPropagation();
+          $("#dropdownMenu").toggle();
+        });
+
+        $(document).click(function (e) {
+          if (!$(e.target).closest("#profileDropdown").length) {
+            $("#dropdownMenu").hide();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
