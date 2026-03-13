@@ -19,6 +19,7 @@ $(function () {
         username: userName,
       }),
       success: function (data) {
+        alert("Registered successfully!");
         window.location.href = "login.html";
         console.log(data);
       },
