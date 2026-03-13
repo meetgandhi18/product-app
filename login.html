@@ -1,54 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Login</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <title>Login</title>
 
-    <link rel="stylesheet" href="CSS/main.css" />
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <div class="login-card">
-      <div id="login-error">Hello</div>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-      <h2 class="login-title">Login</h2>
+<body>
+  <div class="login-card">
 
-      <form id="form">
+    <h2 class="login-title">Login</h2>
+
+    <form id="form" autocomplete="off">
+      <div class="form-group">
         <label for="username">Username</label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          class="form-control"
-          placeholder="Enter username"
-        />
+        <input type="text" name="username" id="username" class="form-control" placeholder="Enter username" />
+      </div>
 
+      <div class="form-group">
         <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          class="form-control"
-          placeholder="Enter password"
-        />
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter password" />
+      </div>
 
-        <button type="submit" class="btn-login">Login</button>
+      <button type="submit" class="btn-login">Login</button>
+    </form>
 
-        <p class="register-text">
-          Don't have an account?
-          <a href="register.html" class="register-link">Register</a>
-        </p>
-      </form>
-    </div>
+    <div id="login-error">Hello</div>
 
-    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
-    <script src="login.js"></script>
-  </body>
+    <p class="register-text">
+      Don't have an account?
+      <a href="register.html" class="register-link">Register</a>
+    </p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
